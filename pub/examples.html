@@ -1,0 +1,132 @@
+<html>
+    <script src="onetable.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="lib.css">
+    <link rel="stylesheet" href="demo.css">
+    <head>
+        <title>OneTable Demo</title>
+        <div id="topbar"><div id ="title">OneTable</div>
+            <a class="active" href="/examples">Examples</a>
+            <a href="/">Landing</a>
+            <a href="/documentation">Documentation</a>
+
+        </div>
+        
+    </head>
+    
+    <body id="body">
+        <div id="demo">
+
+        </div>
+        <div id="controls">
+                <div class = "control">
+                    <form>
+                        <input id="name" placeholder="name">
+                        <input id="age" placeholder="age">
+                        <input id="school" placeholder="school">
+                    </form>
+                    <button id = "rowadd">Add Row</button>
+                </div>
+                <br>
+                <hr>
+
+                <div class = "control">
+                    <form>
+                        <input id="rownum" placeholder="Row Number">
+                    </form>
+                    <button id = "rowremove" >Remove Row</button>
+                    <button id = "getrow">Get Row</button>
+                    <br><br>
+                </div>
+                <hr>
+                <div class = "control">
+                <form>
+                    <input id="column" placeholder="Attribute">
+                </form>
+                <button id = "columnadd">Add Column Attribute</button>
+                <button id = "columndelete">Remove Column Attribute (Use either column # or column name)</button>
+                <br><br>
+                </div>
+                <hr>
+                <div class = "control">
+                    <form>
+                        <input id="headerback" placeholder="Header Background Colour">
+                        <input id="contentback" placeholder="Content Background Colour">
+                        <input id="headertext" placeholder="Header Text Colour">
+                        <input id="contenttext" placeholder="Content Text Colour">
+                    </form>
+                    <button id = "tablefont">Style Table Text Colour</button>
+                    <br><br>
+                </div>
+                <hr>
+                <div class="control">
+                <form>
+                    <input id="fontfam" placeholder="Font Family">
+                    <input id="fontsize" placeholder="FontSize">
+                </form>
+                <button id = "changefonts">Change Font Size</button>
+                </div>
+                <br>
+                <hr>
+                <div class="control">
+                <form>
+                    <input id="alignment" placeholder="Alignment">
+                </form>
+                <button id = "changealign">Change Alignment</button>
+                </div>
+                <br>
+                <hr>
+                <div class="control">
+                <form>
+                    <input id="sortby" placeholder="Sort Column #">
+                    <select id="order">
+                        <option value="ascending">Ascending</option>
+                        <option value="Descending">Descending</option>
+                    </select>
+                </form>
+                
+                <button id="sort">Sort</button>
+                </div>
+                <br>
+                <hr>
+
+                <div class="control">
+                <form>
+                    <input id="changerow" placeholder="Row">
+                    <input id="changecol" placeholder="Column">
+                    <input id="changevalue" placeholder="Value to Replace">
+                </form>
+                <button id = "changeval">Change Value</button>
+                </div>
+                <br><hr>
+                <div class="control">
+                <form>
+                    <input id="sum" placeholder="Sum Column #">
+                </form>
+                
+                <button id="sumbutton">Sum</button>
+                </div>
+                
+
+                <br><hr>
+                <div class="control">
+                <form>
+                    <input id="avrg" placeholder="Average Column #">
+                </form>
+                
+                <button id="average">Average</button>
+                </div>
+                <br><hr> <br>
+                <label class="upload">
+                    <input id="importCSV" type="file" placeholder="Import CSV File">
+                    Import CSV File
+                </label>
+                <br>
+                <br>
+                <div class="control">
+                <button id="downloadLink">Export to CSV file</button>
+                </div>
+        </div>
+        <script src="examples.js"></script>
+    </body>
+</html>

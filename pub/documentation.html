@@ -1,0 +1,121 @@
+<html>
+    <script src="onetable.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="lib.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="doc.css">
+    <head>
+        <title>OneTable Documentation</title>
+        <div id="topbar"><div id ="title">OneTable</div>
+            <a  href="/examples">Examples</a>
+            <a href="/">Landing</a>
+            <a class="active" href="/documentation">Documentation</a>
+
+        </div>
+        
+    </head>
+    
+    <body>
+        <h2>Getting Started</h2>
+        <p>The library does not rely on any external libraries other than jQuery. There are no other CSS files or modules required. To get started, place this inside your website's JavaScript file:</p>
+        <div class="snippet">const table = new TableGenerator(); <br>
+            table.makeTable(document.getElementById("placeholder"));</div>
+        <p>Replace "placeholder" with the div that you would like to place your table under. All of the following functions are accessed through the variable that the TableGenerator function creates.</p>
+
+        <br>
+        <h2>API</h2>
+
+        <h3>makeTable(parent):</h3>
+        <p>This function creates the table and puts it into the HTML by utilizing data stored in this.data. The array stored in this.data is a two-dimensional array that contains the data of the table. The parent parameter is passed on to the library and is used to create the table under
+        the specified parent element. </p>
+
+        <hr>
+
+        <h3>styleTable(headercolour, contentcolour, headerfont, contentfont):</h3>
+        <p>Changes the colours of the table created with four user-inputted parameters. headercolour specifies the background colour of the first row of the table (referred to as table headers), contentcolour changes the background every second row of the data in the table. 
+            headerfont and contentfont changes the colours of the text in the header and content respectively. The format of the inputted colours can either be text (e.g. black, white, blue) or hex colour codes
+        (e.g. #000000, #abcdef). </p>
+
+        <hr>
+
+        <h3>changeFont(font, size):</h3>
+        <p>Changes the font family and the size attributes of the table. The function takes in both parameters as strings. The font parameter requires an exact spelling of the font family that is desired for the table,
+            and size contains a string that contains either a number or in the format of 'apx' where 'a' is a number, specifying the numeric font size of the table's cells.
+        </p>
+
+        <hr>
+        <h3>addRow(data):</h3>
+        <p>Adds a row to the preexisting table. This function takes in an 1-dimensional array in data that will be appended to the end of the table. Values beyond the table's attribute length will not be added.
+        </p>
+
+        <hr>
+
+        <h3>addColumn(attribute):</h3>
+        <p>Adds a column to the preexisting table. This function takes in attribute as a string for the attribute name for the new column, which initializes an empty column with attribute's value as its header.</p>
+
+        <hr>
+
+        <h3>removeColumn(attribute):</h3>
+        <p>Removes a column from the preexisting table. This function takes in attribute as the attribute name for the column to be removed. In this function, attribute can either be a string containing the name of
+            the column to be removed or a string/integer representing the index of the column to be removed (starting from 0).
+        </p>
+
+        <hr>
+
+        <h3>getRow(rownum):</h3>
+        <p>Takes in an integer representing the index of the row that is wanted, and highlights the background of the desired row for 3 seconds in yellow before returning to its original colour. Additionally,
+            returns the selected row.
+        </p>
+
+        <hr>
+
+        <h3>removeRow(rownum):</h3>
+        <p>Takes in an integer representing the index of the row that is wanted, and removes the row from the table.</p>
+
+        <hr>
+
+        <h3>changeAlign(alignment):</h3>
+        <p>Takes in alignment as a string and changes the alignment of the text within the table to the desired alignment.</p>
+
+        <hr>
+
+        <h3>exportCSV():</h3>
+        <p>Exports the current table to a csv file to be stored in the user's computer. The file is stored as table.csv.</p>
+
+        <hr>
+
+        <h3>sortCol(colIndex, order):</h3>
+        <p>Takes in colIndex, an integer representing the column to sort by, and order, which is a string containing either "ascending" or "descending" representing the sorting order. Sorts the table by the specified column
+            and redraws the table on the page.
+        </p>
+
+        <hr>
+
+        <h3>changeElement(row, col, val):</h3>
+        <p>Takes in row and col as two integers representing the location of the value to be changed, and val as any value that the user would like to replace the original with. Changes the data displayed at the row and
+            col location in the table and redraws the table with the new data.
+        </p>
+
+        <hr>
+
+        <h3>sumColumn(column):</h3>
+        <p>Attempts to sum up the numeric data at the column number provided as an integer in column. Returns the sum of the values in the column if the data is all numeric, and returns nothing otherwise</p>
+
+        <hr>
+
+        <h3>avgColumn(column):</h3>
+        <p>Attempts to average the numeric data at the column number provided as an integer in column. Returns the average of the values in the column if the data is all numeric, and returns nothing otherwise</p>cs
+
+        <hr>
+
+        <h3>csvToTable(res):</h3>
+        <p>Takes in a string representation of a csv (res) that has been read (not a csv file itself). For example:</p>
+        <div class="snippet">Name,Age,School\n<br>
+            Nicole,21,UofT\n<br>
+            Ryan,21,UofT\n<br>
+            Kyle,23,UofT\n<br>
+            Brandon,25,UW\n</div>
+        <p>Converts the provided data to the current table and overwrites the table in the HTML page.</p>
+        <hr>
+    </body>
+</html>

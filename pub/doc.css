@@ -1,0 +1,46 @@
+body {
+    font-family: Arial;
+}
+
+h2 {
+    margin-left: 30px;
+}
+
+h3 {
+    margin-left: 30px;
+}
+
+.variable {
+    font-family: Courier;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+p {
+    margin: 10px 10px 10px 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.snippet {
+    background: #f4f4f49f;
+    border: 1px solid #ddd;
+    border-left: 3px solid #002ab4;
+    margin: 30px 30px 30px 30px;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+hr {
+    width: 98%;
+}
